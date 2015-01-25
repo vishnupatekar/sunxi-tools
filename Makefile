@@ -114,6 +114,9 @@ bootinfo: bootinfo.c
 meminfo: meminfo.c
 	$(CROSS_COMPILE)gcc -g -O0 -Wall -static -o $@ $^
 
+getscript: getscript.c
+	$(CROSS_COMPILE)gcc -g -O0 -Wall -static -o $@ $^
+
 .gitignore: Makefile
 	@for x in $(TOOLS) '*.o' '*.swp'; do \
 		echo "$$x"; \
